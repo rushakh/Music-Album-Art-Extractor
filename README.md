@@ -1,4 +1,4 @@
-A simple Console app written in C# for extracting and saving album / cover arts of music files (Local). Has Batch Mode and Single Song Mode, and saves the images in PNG format. 
+A simple Console app written in C# for extracting and saving album / cover arts of music files (Local). Has Batch Mode and Single Song Mode, and saves the images. 
 
 It was part of the music player that I was writing but decided to turn this part into a seperate app, though it is a very simple one at that. Nevertheless, I thought that it might be useful to someone out there.
 
