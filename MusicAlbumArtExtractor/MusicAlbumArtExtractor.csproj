@@ -11,9 +11,11 @@
     <Title>Music Album Art Extractor</Title>
     <Description>Written by @rushakh</Description>
     <PackageTags>music; image; albumart; coverart; c#; .Net;</PackageTags>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Drawing.Common" Version="8.0.6" />
     <PackageReference Include="z440.atl.core" Version="5.25.0" />
   </ItemGroup>
 

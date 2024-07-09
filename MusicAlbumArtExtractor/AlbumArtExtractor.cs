@@ -1,4 +1,6 @@
-﻿
+﻿using System.Drawing;
+using System.Drawing.Imaging;
+
 namespace MusicAlbumArtExtractor
 {
     /// <summary>
@@ -92,7 +94,12 @@ namespace MusicAlbumArtExtractor
                 var pic = track.EmbeddedPictures[0];
                 if (pic.PictureData != null && pic.NativeFormat != Commons.ImageFormat.Unsupported)
                 {
-                    System.IO.File.WriteAllBytes(artPath, pic.PictureData);
+                    MemoryStream memory = new MemoryStream(pic.PictureData, true);
+                    Image art = Image.FromStream(memory);
+                    art.Save(artPath, ImageFormat.Png);
+                    art.Dispose();
+                    art = null;
+                    memory.Dispose();
                 }
             }
             track = null;
